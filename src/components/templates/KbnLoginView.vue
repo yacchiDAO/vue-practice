@@ -33,3 +33,4 @@ export default {
   width: 320px;
   margin: auto;
 }
+</style>
