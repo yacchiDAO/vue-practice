@@ -8,6 +8,7 @@ import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
+Vue.config.performance = true // NODE_ENV == 'development'で測定有効化
 
 // ErrorBoundaryのインストール
 Vue.component(ErrorBoundary.name, ErrorBoundary)
@@ -23,6 +24,5 @@ new Vue({
   el: '#app',
   router,
   store, // インポートしたstoreインスタンスを`store`オプションとして指定
-  components: { App },
-  template: '<App/>'
+  render: h => h(App)
 })
